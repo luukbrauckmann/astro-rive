@@ -1,4 +1,4 @@
-import { Layout, Rive } from "@rive-app/canvas";
+import { Alignment, Fit, Layout, Rive } from "@rive-app/canvas";
 import type { RiveProps } from "./rive";
 
 class RiveCanvas extends HTMLElement {
@@ -10,8 +10,9 @@ class RiveCanvas extends HTMLElement {
     const { src, fit, alignment, autoplay, stateMachines }: RiveProps =
       JSON.parse(canvas.dataset.props as string);
 
-    const layout = new Layout({ fit, alignment });
+    const layout = new Layout({ fit: Fit[fit], alignment: Alignment[alignment] });
 
+    
     new Rive({
       canvas,
       src,

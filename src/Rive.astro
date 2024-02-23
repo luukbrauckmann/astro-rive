@@ -1,14 +1,30 @@
 ---
-import { type RiveProps } from "./rive";
+interface Props {
+  src: string;
+  fit?: "Cover" | "Contain" | "Fill" | "FitWidth" | "FitHeight" | "None" | "ScaleDown";
+  alignment?: "Center" | "TopLeft" | "TopCenter" | "TopRight" | "CenterLeft" | "CenterRight" | "BottomLeft" | "BottomCenter" | "BottomRight";
+  autoplay?: boolean;
+  stateMachines?: string | string[];
+  width?: number;
+  height?: number;
+}
 
-const props: RiveProps = Astro.props as RiveProps;
+const { 
+  src,
+  fit = "Cover",
+  alignment = "Center",
+  autoplay = true,
+  stateMachines = [],
+  width,
+  height
+} = Astro.props;
 ---
 
 <rive-canvas>
   <canvas
-    width={props.width}
-    height={props.height}
-    data-props={JSON.stringify(props)}></canvas>
+    width={width}
+    height={height}
+    data-props={JSON.stringify({ src, fit, alignment, autoplay, stateMachines })}></canvas>
 </rive-canvas>
 
 <script src="./Rive.client.ts"></script>

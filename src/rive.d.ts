@@ -1,11 +1,9 @@
-import type { Alignment, Fit } from "@rive-app/canvas";
-
-export type RiveProps = {
+export interface RiveProps {
   src: string;
-  fit: Fit;
-  alignment: Alignment;
+  fit: "Cover" | "Contain" | "Fill" | "FitWidth" | "FitHeight" | "None" | "ScaleDown";
+  alignment: "Center" | "TopLeft" | "TopCenter" | "TopRight" | "CenterLeft" | "CenterRight" | "BottomLeft" | "BottomCenter" | "BottomRight";
   autoplay: boolean;
   stateMachines: string | string[];
   width: number;
   height: number;
-};
+}

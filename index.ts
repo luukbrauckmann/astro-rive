@@ -1,3 +1,1 @@
-import Rive from "./src/Rive.astro";
-
-export default Rive;
+export { default as Rive } from "./src/Rive.astro";

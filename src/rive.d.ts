@@ -6,4 +6,6 @@ export type RiveProps = {
   alignment: Alignment;
   autoplay: boolean;
   stateMachines: string | string[];
+  width: number;
+  height: number;
 };

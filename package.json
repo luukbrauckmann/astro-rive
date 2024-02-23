@@ -10,7 +10,9 @@
     "index.ts"
   ],
   "keywords": [
-    "astro-component"
+    "astro-rive",
+    "astro",
+    "rive"
   ],
   "scripts": {},
   "devDependencies": {
@@ -21,6 +23,7 @@
   },
   "dependencies": {
     "@astrojs/check": "^0.5.5",
+    "@rive-app/canvas": "^2.10.2",
     "typescript": "^5.3.3"
   }
 }

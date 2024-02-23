@@ -1,0 +1,11 @@
+---
+import { type RiveProps } from "./rive";
+
+const props: RiveProps = Astro.props as RiveProps;
+---
+
+<rive-canvas>
+  <canvas width="320" height="320" data-props={JSON.stringify(props)}></canvas>
+</rive-canvas>
+
+<script src="./Rive.client.ts"></script>

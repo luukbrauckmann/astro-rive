@@ -1,6 +1,6 @@
 {
   "name": "astro-rive",
-  "version": "0.0.1",
+  "version": "0.0.0-dev",
   "type": "module",
   "exports": {
     ".": "./index.ts"
